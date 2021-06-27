@@ -14,6 +14,8 @@ h2 {
 h3 {
   font-size: 18px;
   font-weight: 500;
+  display: inline-flex;
+  flex-grow: 1;
 }
 
 p {
@@ -35,15 +37,25 @@ main img {
 }
 
 /* ---  Groups & Items --- */
+.container{
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
 
 .group {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 20px 10px 20px 10px;
 }
 
 .item {
   flex: 1;
   margin: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .item-double {
@@ -56,6 +68,11 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
@@ -87,12 +104,14 @@ form {
 
 form label {
   font-weight: bold;
+  flex-grow: 1;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  flex-grow: 1;
 }
 
 form button {
@@ -117,3 +136,10 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header nav ul{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
