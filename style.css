@@ -193,7 +193,7 @@ footer p {
   
   .group3 {
     width: 40%;
-    padding: 20px 10px 20px 10px
+    
   }
 
  .container {
@@ -207,12 +207,11 @@ footer p {
   align-items: center;
 }
 
-.large-ideas-container {
-  display: flex;
-}
 
-.ideas-container{
-    flex-direction: column;
+.group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
    
     
   }
