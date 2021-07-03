@@ -14,7 +14,6 @@ h2 {
 h3 {
   font-size: 18px;
   font-weight: 500;
-  display: inline-flex;
   flex-grow: 1;
   margin: 0px 10px 0px 0px;
 }
@@ -41,24 +40,18 @@ main img {
 
 
 .container-form{
-  flex: 1;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
+    flex-grow: 1;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .group2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   padding: 20px 10px 20px 10px;
 }
 
 .group1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   padding: 20px 10px 20px 10px;
 }
@@ -72,9 +65,6 @@ main img {
   }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
     padding: 20px 10px 20px 10px
 }
@@ -83,6 +73,17 @@ main img {
   flex: 2;
 }
 
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ideas-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 
 
@@ -179,29 +180,50 @@ footer p {
   .container-form {
     flex-direction: column;
     display: inline-flex;
+    justify-content:space-evenly
   }
 
   .group1 {
-    width: 25%;
-    display: inline-flex;
-    flex-direction: row;
+    width: 25%
   }
 
   .group2 {
-    width: 50%;
-    display: inline-flex;
+    width: 50%
+  }
+  
+  .group3 {
+    width: 40%;
+    padding: 20px 10px 20px 10px
+  }
+
+ .container {
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+
+.aboutContainer {
+  flex-direction: row;
+  display:inline-flex;
+  align-items: center;
+}
+
+.large-ideas-container {
+  display: flex;
+}
+
+.ideas-container{
+    flex-direction: column;
+   
     
   }
 
+
 .item {
-  width: 40%;
+ width: 10%;
+ 
 }
 
- .container {
-   display: flex; 
-   flex-wrap: wrap;
-   
-   justify-content: space-between;
  }
 
-}
+
+
