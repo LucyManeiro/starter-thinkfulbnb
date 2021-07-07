@@ -29,7 +29,8 @@ section.alternate-background {
   background-color: #00a699;
   color: #fff;
 }
-img {
+
+main img {
   width: 100%;
 }
 
@@ -42,7 +43,7 @@ img {
 
 .item {
   flex: 1;
-  margin: 10px;
+  margin:10px;
 }
 
 .item-double {
@@ -53,27 +54,19 @@ img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  margin: 14px 0 14px 20px;
-  padding-top: 0;
-  font-size: 42px;
+  font-size: 50px;
   color: #fff;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
 }
 
 header nav ul {
   display: flex;
-  padding-left: 0;
-  list-style: none;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -86,6 +79,10 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
+header nav ul li:last-child a {
+  margin-right: 20px;
+}
+
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
@@ -93,10 +90,11 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
-  padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #ff385c;
+  padding: 10px;
 }
 
 form label {
@@ -106,8 +104,8 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
-  align-items: flex-end;
+  width: 65%;
+  float: right;
 }
 
 form button {
@@ -117,12 +115,6 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
-}
-
-.box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 /* -------  Footer ------- */
@@ -139,38 +131,54 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
+@media all and (min-width: 600px) {
   header {
+    background-color: #ff385c;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0 30px;
-  }
-
-  header h1 {
-    margin: 14px 0;
-    padding-top: 0;
   }
 
   header nav {
-    margin-top: 8px;
-  }
-
-  .logo {
-    font-family: "Pangolin", cursive;
-    font-size: 72px;
-    color: #fff;
+    padding: 10px;
   }
 
   form {
     flex-direction: row;
-    justify-content: space-between;
-  }
-  .box {
-    flex-direction: column;
   }
 
   .group {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
     align-items: center;
+  }
+
+  .vacation-form .item {
+    display: flex block;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .item label
+  , .item input 
+  , .item select 
+  , .item button{
+    display: flex;
+    width: 100%
+  }
+
+  .grid-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column; 
+    margin: 10px;
+  }
+
+  .grid-row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
   }
 }
