@@ -54,12 +54,14 @@ main img {
 
 header {
   background-color: #FF385C;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 0px 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
+  margin: 14px 0 14px 20px;
+  padding-top:0;
   font-size: 72px;
   color: #fff;
 }
@@ -71,6 +73,7 @@ header nav {
 
 header nav ul {
   display: flex;
+  padding-left: 0;
 }
 
 header nav ul li {
@@ -91,6 +94,8 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 
 form {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #FF385C;
   padding: 10px;
 }
@@ -99,14 +104,16 @@ form label {
   font-weight: bold;
 }
 
-form div {
+.box {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
 }
 
 form select, form input {
   margin-bottom: 20px;
   width: 180px;
+  align-items: flex-end;
 }
 
 form button {
@@ -136,13 +143,22 @@ footer p {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    padding: 0 30px;
+  }
+  
+  header h1 {
+    margin: 14px 0;
+    padding-top: 0;
   }
   
   .logo {
-    margin: 14px 0 14px 20px;
-    padding-top: 0;
-    font-size: 42px;
+    font-family: "Pangolin", cursive;
+    font-size: 72px;
+    color: #fff;
+  }
+  
+  header nav {
+    margin-top: 8px;
   }
   
   header nav ul {
@@ -155,21 +171,12 @@ footer p {
   }
   
   form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
-  form div {
+  .box {
     flex-direction: column;
-  }
-  
-  form button {
-    flex: 1;
-  }
-  
-  form select, form input {
-    margin-bottom: 0px;
   }
 }
 
