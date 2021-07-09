@@ -60,7 +60,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 50px;
   color: #fff;
 }
 
@@ -150,6 +150,7 @@ footer p {
   }
   
   .group {
+    display: flex;
     flex-direction: row;
     align-items: center;
   }
@@ -158,10 +159,12 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
   
   form div {
     flex-direction: column;
+
   }
   
   form button {
